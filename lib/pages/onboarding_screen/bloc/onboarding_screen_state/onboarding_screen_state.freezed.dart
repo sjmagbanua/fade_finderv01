@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$OnboardingScreenState {
 
- String get message;
+ String get message; int get index;
 /// Create a copy of OnboardingScreenState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -27,20 +27,20 @@ $OnboardingScreenStateCopyWith<OnboardingScreenState> get copyWith => _$Onboardi
 @override
 bool operator ==(Object other) {
   final _this = this as OnboardingScreenState;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is OnboardingScreenState&&(identical(other.message, _this.message) || other.message == _this.message));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is OnboardingScreenState&&(identical(other.message, _this.message) || other.message == _this.message)&&(identical(other.index, _this.index) || other.index == _this.index));
 }
 
 
 @override
 int get hashCode {
   final _this = this as OnboardingScreenState;
-  return Object.hash(runtimeType,_this.message);
+  return Object.hash(runtimeType,_this.message,_this.index);
 }
 
 @override
 String toString() {
   final _this = this as OnboardingScreenState;
-  return 'OnboardingScreenState(message: ${_this.message})';
+  return 'OnboardingScreenState(message: ${_this.message}, index: ${_this.index})';
 }
 
 
@@ -51,7 +51,7 @@ abstract mixin class $OnboardingScreenStateCopyWith<$Res>  {
   factory $OnboardingScreenStateCopyWith(OnboardingScreenState value, $Res Function(OnboardingScreenState) _then) = _$OnboardingScreenStateCopyWithImpl;
 @useResult
 $Res call({
- String message
+ String message, int index
 });
 
 
@@ -68,10 +68,11 @@ class _$OnboardingScreenStateCopyWithImpl<$Res>
 
 /// Create a copy of OnboardingScreenState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? message = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? message = null,Object? index = null,}) {
   return _then(OnboardingScreenState(
 message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
-as String,
+as String,index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
+as int,
   ));
 }
 
@@ -153,10 +154,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String message)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String message,  int index)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _OnboardingScreenState() when $default != null:
-return $default(_that.message);case _:
+return $default(_that.message,_that.index);case _:
   return orElse();
 
 }
@@ -174,10 +175,10 @@ return $default(_that.message);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String message)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String message,  int index)  $default,) {final _that = this;
 switch (_that) {
 case _OnboardingScreenState():
-return $default(_that.message);}
+return $default(_that.message,_that.index);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -191,10 +192,10 @@ return $default(_that.message);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String message)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String message,  int index)?  $default,) {final _that = this;
 switch (_that) {
 case _OnboardingScreenState() when $default != null:
-return $default(_that.message);case _:
+return $default(_that.message,_that.index);case _:
   return null;
 
 }
@@ -206,10 +207,11 @@ return $default(_that.message);case _:
 
 
 class _OnboardingScreenState implements OnboardingScreenState {
-  const _OnboardingScreenState({this.message = ''});
+  const _OnboardingScreenState({this.message = '', this.index = 0});
   
 
 @override@JsonKey() final  String message;
+@override@JsonKey() final  int index;
 
 /// Create a copy of OnboardingScreenState
 /// with the given fields replaced by the non-null parameter values.
@@ -221,18 +223,18 @@ _$OnboardingScreenStateCopyWith<_OnboardingScreenState> get copyWith => __$Onboa
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _OnboardingScreenState&&(identical(other.message, message) || other.message == message));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _OnboardingScreenState&&(identical(other.message, message) || other.message == message)&&(identical(other.index, index) || other.index == index));
 }
 
 
 @override
 int get hashCode {
-    return Object.hash(runtimeType,message);
+    return Object.hash(runtimeType,message,index);
 }
 
 @override
 String toString() {
-    return 'OnboardingScreenState(message: $message)';
+    return 'OnboardingScreenState(message: $message, index: $index)';
 }
 
 
@@ -243,7 +245,7 @@ abstract mixin class _$OnboardingScreenStateCopyWith<$Res> implements $Onboardin
   factory _$OnboardingScreenStateCopyWith(_OnboardingScreenState value, $Res Function(_OnboardingScreenState) _then) = __$OnboardingScreenStateCopyWithImpl;
 @override @useResult
 $Res call({
- String message
+ String message, int index
 });
 
 
@@ -260,10 +262,11 @@ class __$OnboardingScreenStateCopyWithImpl<$Res>
 
 /// Create a copy of OnboardingScreenState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? message = null,Object? index = null,}) {
   return _then(_OnboardingScreenState(
 message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
-as String,
+as String,index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
+as int,
   ));
 }
 

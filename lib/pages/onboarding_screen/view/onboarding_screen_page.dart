@@ -1,3 +1,4 @@
+import 'package:fade_finder/pages/onboarding_screen/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreenPage extends StatelessWidget {
@@ -5,6 +6,14 @@ class OnboardingScreenPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: OnboardingScreenBody(),
+          )
+        ],
+      ),
+    );
   }
 }

@@ -7,6 +7,9 @@ part 'onboarding_screen_state.freezed.dart';
 @freezed
 sealed class OnboardingScreenState with _$OnboardingScreenState {
   // Added 'sealed'
-  const factory OnboardingScreenState({@Default('') String message}) =
+  const factory OnboardingScreenState({
+    @Default('') String message,
+    @Default(0) int index,
+    }) =
       _OnboardingScreenState;
 }
