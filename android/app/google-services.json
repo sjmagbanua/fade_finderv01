@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "871986085579",
+    "project_id": "fade-finderv01",
+    "storage_bucket": "fade-finderv01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871986085579:android:7923886ea2d30c196ae54e",
+        "android_client_info": {
+          "package_name": "com.example.fade_finder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoUw-JKr_BiSmYa60BbT6ESYwFgmCCJ6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
