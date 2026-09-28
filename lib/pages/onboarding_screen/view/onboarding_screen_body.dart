@@ -1,3 +1,4 @@
+import 'package:fade_finder/pages/login/view/view.dart';
 import 'package:fade_finder/pages/onboarding_screen/bloc/bloc.dart';
 import 'package:fade_finder/pages/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -114,7 +115,7 @@ class _OnboardingScreenBodyState extends State<OnboardingScreenBody> {
               ),
               const SizedBox(height: 12),
               TextButton(
-                onPressed: () => context.go('/login'),
+                onPressed: () => context.go(LoginPage.route),
                 child: const Text('Skip'),
               ),
             ],

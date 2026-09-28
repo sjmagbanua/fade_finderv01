@@ -1,3 +1,4 @@
+import 'package:fade_finder/pages/login/view/view.dart';
 import 'package:fade_finder/pages/onboarding_screen/view/onboarding_screen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -6,6 +7,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
@@ -19,12 +21,12 @@ final GoRouter _router = GoRouter(
         return const OnboardingScreenPage();
       },
       routes: <RouteBase>[
-        // GoRoute(
-        //   path: 'details',
-        //   builder: (BuildContext context, GoRouterState state) {
-        //     return const DetailsScreen();
-        //   },
-        // ),
+        GoRoute(
+          path: LoginPage.route,
+          builder: (BuildContext context, GoRouterState state) {
+            return const LoginPage();
+          },
+        ),
       ],
     ),
   ],
@@ -40,7 +42,30 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routerConfig: _router,
       title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      theme: ThemeData(
+        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: false,
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.white,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(14),
+            borderSide: BorderSide.none,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(14),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(14),
+            borderSide: const BorderSide(color: Color(0xFF171717)),
+          ),
+        ),
+      ),
     );
   }
 }
