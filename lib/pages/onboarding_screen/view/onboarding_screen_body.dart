@@ -115,7 +115,7 @@ class _OnboardingScreenBodyState extends State<OnboardingScreenBody> {
               ),
               const SizedBox(height: 12),
               TextButton(
-                onPressed: () => context.go(LoginPage.route),
+                onPressed: () => context.push(LoginPage.route),
                 child: const Text('Skip'),
               ),
             ],
